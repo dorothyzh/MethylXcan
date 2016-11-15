@@ -1,7 +1,7 @@
 # MethylXcan
 
 Download the demo folder, and go into the demo folder run 
-      "perl script/run_gene_list1.pl \
+      "perl script/run_gene_list.pl \
             data/ex_probe_list.demo.txt \
             data/me_probe_annotation.demo.csv \
             data/ex_dataset.demo.txt \
