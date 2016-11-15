@@ -61,7 +61,7 @@ sub run
 
 system("cat run/* > final.txt");
 system("head -n 1 final.txt > ./MethylXcan.txt");
-system("cat final.txt | sed '/CpG/d' > ./MethylXcan.txt");
+system("cat final.txt | sed '/CpG/d' >> ./MethylXcan.txt");
 system("rm final.txt");
 
 
