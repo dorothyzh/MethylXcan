@@ -1,6 +1,8 @@
 func.glmnet.1.cv = function (exFile, meFile)
   
 {
+  install.packages("glmnet")
+  install.packages("methods")
   library(glmnet)
   library(methods)
   # get the expression and methylation files
