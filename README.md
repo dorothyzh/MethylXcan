@@ -1,5 +1,25 @@
-# MethylXcan
+README for MethylXcan
+===============
 
+[Huan ZHONG](https://github.com/dorothyzh/) \(zhdorothy5 at uab dot edu\)
+
+* * *
+
+Table of Contents
+-----------------
+* [Introduction](#introduction)
+* [Compilation & Installation](#compilation)
+* [Usage](#usage)
+    * [Build RSEM references using RefSeq, Ensembl, or GENCODE annotations](#built)
+* [Demo](#demo)
+* [Authors](#authors)
+
+* * *
+
+## <a name="introduction"></a> Introduction
+
+
+## <a name="demo"></a> demo
 Download the demo folder, and go into the demo folder run 
       "perl script/run_gene_list.pl \
             data/ex_probe_list.demo.txt \
@@ -10,3 +30,5 @@ Download the demo folder, and go into the demo folder run
             data/gene_annotation.demo.txt"
             
 The final "MethylXcan.txt" is the final results.
+
+
