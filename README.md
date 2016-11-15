@@ -10,7 +10,7 @@ Table of Contents
 * [Introduction](#introduction)
 * [Compilation & Installation](#compilation)
 * [Usage](#usage)
-    * [Build RSEM references using RefSeq, Ensembl, or GENCODE annotations](#built)
+    * [Using Methylation to predict Gene expression](#built)
 * [Demo](#demo)
 * [Authors](#authors)
 
