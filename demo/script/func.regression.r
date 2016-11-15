@@ -1,8 +1,15 @@
 func.glmnet.1.cv = function (exFile, meFile)
   
 {
-  install.packages("glmnet")
-  install.packages("methods")
+  is.installed <- function(mypkg){
+  is.element(mypkg, installed.packages()[,1])
+  } 
+
+  for(i in c("glmnet","methods")) {
+  if (!is.installed(i)){
+    install.packages(i)
+    }
+  }
   library(glmnet)
   library(methods)
   # get the expression and methylation files
