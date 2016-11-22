@@ -32,12 +32,7 @@ No installation should be performed. You only need to prepare the proper format 
 
        ILMN_2038774    EEF1A1  NM_001402.5     chr6:74284964-74285013
 
-#### b) me_probe_annotation.csv
-   One comma delimited annotation file, containing cpg probe, gene name.
-                                    
-       cg00739120,GAPDHS,TMEM147, 
-
-#### c) ex_dataset.txt 
+#### b) ex_dataset.txt 
    One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
    
        ILMN_1343291    16.043236443862 15.9458304153505        15.9085900238073...
@@ -47,7 +42,7 @@ No installation should be performed. You only need to prepare the proper format 
        Hybridization REF       TWPID6598_FAT_2_1;TWPID6598_FAT_1_1     TWPID3283_FAT_3_1;TWPID3283_FAT_2_1;TWPID3283_FAT_1_1...
 
 
-#### d) me_dataset.txt 
+#### c) me_dataset.txt 
    One tab delimited DNA methylation dataset, containing cpg probe and its methylation values(normalized if it is microarray data, beta values are required) from different samples.
    
        cg00240178      0.36676 0.38544 0.30756...
@@ -56,13 +51,13 @@ No installation should be performed. You only need to prepare the proper format 
    
        Hybridization REF       TWPID5259       TWPID8404       TWPID2116...
 
-#### e) methylation_annotation.txt
+#### d) methylation_annotation.txt
    One tab delimited cpg probe annotation
    
        IlmnID  CHR     MAPINFO Strand  UCSC_RefGene_Name       UCSC_RefGene_Group
        cg00240178      6       74232108        R       EEF1A1  TSS1500
        
-#### f) gene_annotation.txt
+#### e) gene_annotation.txt
    One tab delimited gene annotation.
    
         chr     strand  txStart txEnd   name
@@ -92,16 +87,9 @@ Download the demo folder, and go into the demo folder and simply run
    
     perl script/run_gene_list.pl \
             data/ex_probe_list.demo.txt \
-            data/me_probe_annotation.demo.csv \
             data/ex_dataset.demo.txt \
             data/me_dataset.demo.txt \
             data/methylation_annotation.demo.txt \
-            data/gene_annotation.demo.txt
-            
-            
-            
-            
-            
             data/gene_annotation.demo.txt
 
 The final "MethylXcan.txt" is the final results.
