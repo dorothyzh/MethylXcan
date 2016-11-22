@@ -123,7 +123,12 @@ __genevar:__ variance of gene expression profiling between different samples.
 
 __dist:__ the distance between each CpG and its corresponding gene's TSS site.
 
-## <a name="demo"></a> demo
+
+
+
+
+
+## <a name="demo"></a> Demo
 
 Download the demo folder, and go into the demo folder and simply run 
    
@@ -138,6 +143,6 @@ The final "MethylXcan.txt" is the final results.
 
 
             
-
+## <a name="authors"></a> Authors
 
 
