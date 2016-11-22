@@ -44,7 +44,7 @@ No installation should be performed. You only need to prepare the proper format 
        
 
 #### c) me_dataset.txt 
-   One tab delimited DNA methylation dataset, containing cpg probe and its methylation values(normalized if it is microarray data, beta values are required) from different samples.
+   One tab delimited DNA methylation dataset, containing CpG probe and its methylation values(normalized if it is microarray data, beta values are required) from different samples.
        
        Hybridization REF       TWPID5259       TWPID8404       TWPID2116...
        cg00240178      0.36676 0.38544 0.30756...
@@ -53,7 +53,7 @@ No installation should be performed. You only need to prepare the proper format 
        
 
 #### d) methylation_annotation.txt
-   One tab delimited cpg probe annotation
+   One tab delimited CpG probe annotation
    
        IlmnID  CHR     MAPINFO Strand  UCSC_RefGene_Name       UCSC_RefGene_Group
        cg00240178      6       74232108        R       EEF1A1  TSS1500
@@ -76,7 +76,29 @@ No installation should be performed. You only need to prepare the proper format 
               "R2.multiple","R2.multiple.adjust","R2.multiple.cv","R2.multiple.cv.var",
               "R2.glmnet","R2.glmnet.cv","R2.glmnet.cv.var",
               "p.single","p.multiple","p.multiple.overall","genevar","dist"
- 
+ rid: Simulated read's index, numbered from 0
+__CpG:__ name of CpG probes.  
+__n.site:__ how many CpG sites per gene.
+__gene:__ gene name.
+__beta.single:__ coefficient from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__beta.multiple:__ coefficient from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__beta.glmnet:__ coefficient from lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.max:__ max coefficient of determination from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.max.var:__ variance between coefficients of determination from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.cv.max:__ max coefficient of determination from cross-validation of single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.cv.max.var:__ variance between coefficients of determination from cross-validation of single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple:__ coefficient of determination from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.adjust:__ adjusted coefficient of determination from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.cv:__ coefficient of determination from cross-valudation of multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.cv.var:__ variance of coefficient of determination from cross-valudation of multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet:__ coefficient of determination from lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet.cv:__ coefficient of determination from cross-validation of lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet.cv.var:__ variance of coefficient of determination from cross-validation of lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__p.single:__ p-value from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__p.multiple:__ p-value from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__p.multiple.overall:__ the overall p-value from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__genevar:__ variance of gene expression profiling between different samples.
+__dist:__ the distance between each CpG and its corresponding gene's TSS site.
 
 ## <a name="demo"></a> demo
 
