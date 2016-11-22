@@ -31,25 +31,26 @@ No installation should be performed. You only need to prepare the proper format 
    One tab delimited annotation file, containing gene expression probe, gene name, official name, chromosome and locations.
 
        ILMN_2038774    EEF1A1  NM_001402.5     chr6:74284964-74285013
+       
+    **Note** that this file could contain no header.
 
 #### b) ex_dataset.txt 
    One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
-   
+       
+       Hybridization REF       TWPID6598       TWPID3283       TWPID5553...
        ILMN_1343291    16.043236443862 15.9458304153505        15.9085900238073...
        
-   **Note** that this file should contain header, the first column is "Hybridization REF", the others are sample names, like:
    
-       Hybridization REF       TWPID6598_FAT_2_1;TWPID6598_FAT_1_1     TWPID3283_FAT_3_1;TWPID3283_FAT_2_1;TWPID3283_FAT_1_1...
-
+       
 
 #### c) me_dataset.txt 
    One tab delimited DNA methylation dataset, containing cpg probe and its methylation values(normalized if it is microarray data, beta values are required) from different samples.
-   
+       
+       Hybridization REF       TWPID5259       TWPID8404       TWPID2116...
        cg00240178      0.36676 0.38544 0.30756...
        
-   **Note** that this file should contain header, the first column is "Hybridization REF", the others are sample names like:
    
-       Hybridization REF       TWPID5259       TWPID8404       TWPID2116...
+       
 
 #### d) methylation_annotation.txt
    One tab delimited cpg probe annotation
@@ -64,17 +65,13 @@ No installation should be performed. You only need to prepare the proper format 
         chr6    -       74225472        74230755        EEF1A1
 
 
+### II. Run the perl script on the prepared input files.
+      
+        perl run_gene_list.pl  ex_probe_list.txt  ex_dataset.txt  me_dataset.txt methylation_annotation.txt  data/gene_annotation.demo.txt
 
-
-$ex_probe_list = shift;   ###probes
-$me_probe_annotation=shift;    ###M450_annotation.csv
-$ex_dataset=shift;      ###MuTHER_Fat_normalized_31032010_uncondensed_Ids.txt
-$me_dataset=shift;      ###MuTHER_Fat_450K_norm_AE_030913.txt
-$methylation_annotation=shift;   ###Methylation_annotation.txt
-$gene_annotation=shift;   ###Gene_annotation.txt
-$path="run";
-
-colname = c("CpG","n.site","gene","beta.single","beta.multiple","beta.glmnet",
+#### III. Check the final results.
+   The final results will be named as "MethylXcan.txt", including 22 columns.
+   colname = c("CpG","n.site","gene","beta.single","beta.multiple","beta.glmnet",
               "R2.single.max","R2.single.max.var","R2.single.cv.max","R2.single.cv.max.var",
               "R2.multiple","R2.multiple.adjust","R2.multiple.cv","R2.multiple.cv.var",
               "R2.glmnet","R2.glmnet.cv","R2.glmnet.cv.var",
