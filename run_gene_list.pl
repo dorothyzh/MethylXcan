@@ -9,7 +9,7 @@ $methylation_annotation=shift;   ###Methylation_annotation.txt
 $gene_annotation=shift;   ###Gene_annotation.txt
 $path="run";
 
-die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $ex_dataset;
+die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $ex_probe_list $ex_dataset $me_dataset $methylation_annotation $gene_annotation;
 
 
 system("mkdir run");
