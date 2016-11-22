@@ -2,14 +2,21 @@
 #use strict;
 my $start_run = time();
 
-$ex_probe_list = shift;   ###probes
-$ex_dataset=shift;      ###MuTHER_Fat_normalized_31032010_uncondensed_Ids.txt
-$me_dataset=shift;      ###MuTHER_Fat_450K_norm_AE_030913.txt
-$methylation_annotation=shift;   ###Methylation_annotation.txt
-$gene_annotation=shift;   ###Gene_annotation.txt
+#$ex_probe_list =shift;   ###probes
+#$ex_dataset=shift;      ###MuTHER_Fat_normalized_31032010_uncondensed_Ids.txt
+#$me_dataset=shift;      ###MuTHER_Fat_450K_norm_AE_030913.txt
+#$methylation_annotation=shift;   ###Methylation_annotation.txt
+#$gene_annotation=shift;   ###Gene_annotation.txt
+
+my ($ex_probe_list,$ex_dataset,$me_dataset,$methylation_annotation,$gene_annotation)=@ARGV;
+
 $path="run";
 
-die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $ex_probe_list $ex_dataset $me_dataset $methylation_annotation $gene_annotation;
+if (@ARGV <5) {
+    die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n";
+}
+
+#die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $ex_probe_list ;
 
 
 system("mkdir run");
