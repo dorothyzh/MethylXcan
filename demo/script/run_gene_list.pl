@@ -3,14 +3,13 @@
 my $start_run = time();
 
 $ex_probe_list = shift;   ###probes
-#$me_probe_annotation=shift;    ###M450_annotation.csv
 $ex_dataset=shift;      ###MuTHER_Fat_normalized_31032010_uncondensed_Ids.txt
 $me_dataset=shift;      ###MuTHER_Fat_450K_norm_AE_030913.txt
 $methylation_annotation=shift;   ###Methylation_annotation.txt
 $gene_annotation=shift;   ###Gene_annotation.txt
 $path="run";
 
-die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $me_probe_annotation;
+die "Usage: $0 ex_probe_list ex_dataset me_dataset methylation_annotation gene_annotation\n" unless $ex_dataset;
 
 
 system("mkdir run");
@@ -30,8 +29,8 @@ while(<GL>)
 # methylation data
     if (not -e "$path/$gene/me.txt") {
         system("head -1 $methylation_annotation > $path/$gene/cpg_anno.txt");
-	system("cat data/me.header.txt > $path/$gene/me.txt");
-        system("grep \",$gene,\" $methylation_annotation | cut -f 1 -d > $path/$gene/me.probes.txt");
+        system("cat data/me.header.txt > $path/$gene/me.txt");
+        system("grep \"$gene\" $methylation_annotation | cut -f 1 > $path/$gene/me.probes.txt");
         open(PB, "$path/$gene/me.probes.txt");
         while(<PB>)
         {
