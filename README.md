@@ -27,10 +27,34 @@ No installation should be performed. You only need to prepare the proper format 
 
 ### I. Preparing Input Files
 
-#### A.ex_probe_list.txt
-A tab delimited annotation file, containing probe name, gene name, official name, chromosome and locations.
+#### a) ex_probe_list.txt
+   One tab delimited annotation file, containing gene expression probe, gene name, official name, chromosome and locations.
 
-      ILMN_2038774    EEF1A1  NM_001402.5     chr6:74284964-74285013
+       ILMN_2038774    EEF1A1  NM_001402.5     chr6:74284964-74285013
+
+#### b) me_probe_annotation.csv
+   One comma delimited annotation file, containing cpg probe, gene name.
+                                    
+       cg00739120,GAPDHS,TMEM147, 
+
+#### c) ex_dataset.txt 
+   One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
+   
+       ILMN_1343291    16.043236443862 15.9458304153505        15.9085900238073...
+       
+   **Note** that this file should contain header, like:
+   
+       Hybridization REF       TWPID6598_FAT_2_1;TWPID6598_FAT_1_1     TWPID3283_FAT_3_1;TWPID3283_FAT_2_1;TWPID3283_FAT_1_1...
+
+
+#### d) me_dataset.txt 
+
+
+#### e) methylation_annotation.txt
+
+
+
+
 
 colname = c("CpG","n.site","gene","beta.single","beta.multiple","beta.glmnet",
               "R2.single.max","R2.single.max.var","R2.single.cv.max","R2.single.cv.max.var",
