@@ -76,7 +76,7 @@ No installation should be performed. You only need to prepare the proper format 
               "R2.multiple","R2.multiple.adjust","R2.multiple.cv","R2.multiple.cv.var",
               "R2.glmnet","R2.glmnet.cv","R2.glmnet.cv.var",
               "p.single","p.multiple","p.multiple.overall","genevar","dist"
-
+ 
 
 ## <a name="demo"></a> demo
 
