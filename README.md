@@ -28,11 +28,12 @@ No further installation is needed. You only need to format the input files acord
 ### I. Preparing Input Files
 
 #### a) ex_probe_list.txt
-   One tab delimited annotation file, containing gene expression probe, gene name, official name, chromosome and locations.
+   One tab-delimited annotation file containing gene expression probe, gene name, official name, chromosome and locations. Here is one gene entry as example.
 
-       ILMN_2038774    EEF1A1  NM_001402.5     chr6:74284964-74285013
+      probe           gene name       official name   chromosome and locations  
+      ILMN_2038774    EEF1A1          NM_001402.5     chr6:74284964-74285013
        
-    **Note** that this file could contain no header.
+    **Note**  This file can be with or without header.
 
 #### b) ex_dataset.txt 
    One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
