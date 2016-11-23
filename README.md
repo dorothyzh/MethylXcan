@@ -70,25 +70,24 @@ No further installation is needed. You only need to format the input files acord
       
         perl run_gene_list.pl  ex_probe_list.txt  ex_dataset.txt  me_dataset.txt methylation_annotation.txt  data/gene_annotation.demo.txt
 
-#### III. Check the final results.
+#### III.  Final results.
    The final results will be named as "MethylXcan.txt", including 22 columns.
 
 
 __CpG:__ name of CpG probes.  
 
-__n.site:__ how many CpG sites per gene.
+__n.site:__ number of CpG sites per gene.
 
 
 __gene:__ gene name.
 
-__beta.single:__ coefficient from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__beta.single:__  regression coefficient from single regression of gene expression on its each CpGs methylation separately.
 
-__beta.multiple:__ coefficient from multiple regressions between gene expression and its corresponding CpGs' methylation 
-ratios.
+__beta.multiple:__ regression coefficients from multiple regression of gene expression on the methylation of its all CpG sites simultaneously. 
 
 __beta.glmnet:__ coefficient from lasso regression between gene expression and its corresponding CpGs' methylation ratios.
 
-__R2.single.max:__ max coefficient of determination from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.max:__  the largest coefficient of determination from the single regressions of one gene.
 
 __R2.single.max.var:__ variance between coefficients of determination from single regression between gene expression and its corresponding CpGs' methylation ratios.
 
@@ -110,11 +109,11 @@ __R2.glmnet.cv:__ coefficient of determination from cross-validation of lasso re
 
 __R2.glmnet.cv.var:__ variance of coefficient of determination from cross-validation of lasso regression between gene expression and its corresponding CpGs' methylation ratios.
 
-__p.single:__ p-value from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__p.single:__ p-value from single regression.
 
-__p.multiple:__ p-value from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__p.multiple:__ p-value for each CpG in a  multiple regressions.
 
-__p.multiple.overall:__ the overall p-value from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__p.multiple.overall:__ the overall p-value from multiple regressions.
 
 __genevar:__ variance of gene expression profiling between different samples.
 
