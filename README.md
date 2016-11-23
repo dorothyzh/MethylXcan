@@ -36,7 +36,7 @@ No further installation is needed. You only need to format the input files acord
     **Note**  This file cannot have header.
 
 #### b) ex_dataset.txt 
-   One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
+   One tab-delimited gene expression profiling dataset, containing gene probe and its profiling values (normalized if it is microarray data) from different samples.
        
        Hybridization REF       TWPID6598       TWPID3283       TWPID5553...
        ILMN_1343291    16.043236443862 15.9458304153505        15.9085900238073...
@@ -45,7 +45,7 @@ No further installation is needed. You only need to format the input files acord
        
 
 #### c) me_dataset.txt 
-   One tab delimited DNA methylation dataset, containing CpG probe and its methylation values(normalized if it is microarray data, beta values are required) from different samples.
+   One tab-delimited DNA methylation dataset, containing CpG probes and their methylation values (normalized if it is microarray data, beta values are required) from different samples.
        
        Hybridization REF       TWPID5259       TWPID8404       TWPID2116...
        cg00240178      0.36676 0.38544 0.30756...
@@ -54,13 +54,13 @@ No further installation is needed. You only need to format the input files acord
        
 
 #### d) methylation_annotation.txt
-   One tab delimited CpG probe annotation
+   One tab-delimited CpG probe annotation file.
    
        IlmnID  CHR     MAPINFO Strand  UCSC_RefGene_Name       UCSC_RefGene_Group
        cg00240178      6       74232108        R       EEF1A1  TSS1500
        
 #### e) gene_annotation.txt
-   One tab delimited gene annotation.
+   One tab-delimited gene annotation file.
    
         chr     strand  txStart txEnd   name
         chr6    -       74225472        74230755        EEF1A1
