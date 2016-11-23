@@ -17,7 +17,7 @@ Table of Contents
 * * *
 
 ## <a name="introduction"></a> Introduction
-We have developed the MethylXcan which can predict the transcriptome profiling lanscape (make it more specific on what people can actually get) based on DNA methylation data, and provide insights into the mechanism of these associations.
+We have developed the MethylXcan which can predict the transcriptome profiling lanscape (make it more specific on what people can actually get) based on DNA methylation data, and provide insights (genes and pathways that are more predictable) into the mechanism of these associations.
 
 ## <a name="compilation"></a> Prerequisites & Installation
 R 3.2.1 is suggested. Some R packages, like "glmnet" and "methods" are also required.
