@@ -33,7 +33,7 @@ No further installation is needed. You only need to format the input files acord
       probe           gene name       official name   chromosome and locations  
       ILMN_2038774    EEF1A1          NM_001402.5     chr6:74284964-74285013
        
-    **Note**  This file can be with or without header.
+    **Note**  This file cannot have header.
 
 #### b) ex_dataset.txt 
    One tab delimited gene expression profiling dataset, containing gene probe and its profiling values(normalized if it is microarray data) from different samples.
