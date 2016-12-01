@@ -253,7 +253,7 @@ func.glmnet.1.cv = function (exFile, meFile)
   ###########################################################################################------------------------------------final output
   ## organize for output
   out = data.frame(sites,n.site,as.character(ex.gene),beta.single,beta.multiple,beta.glmnet,
-                   R2.single.max,R2.single.max.var,R2.single.cv.max,R2.single.cv.max.var,
+                   R2.single.max,R2.single.var,R2.single.cv.max,R2.single.cv.max.var,
                    R2.multiple,R2.multiple.adjust,R2.multiple.cv,R2.multiple.cv.var,
                    R2.glmnet,R2.glmnet.cv,R2.glmnet.cv.var,
                    p.single,p.multiple,p.multiple.overall,genevar
