@@ -120,7 +120,7 @@ __genevar:__ variance of gene expression profiling between different samples.
 __dist:__ the distance between each CpG and its corresponding gene's TSS site.
 
 
-### IV. Warning.
+### IV. Computing Time.
 The program might take a long time to run, so when running the job in cluster, it is recommended to split your probe files (ex_probe_list.txt) into several files, and send the jobs to different nodes. 
 
 
