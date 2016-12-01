@@ -71,7 +71,7 @@ No further installation is needed. You only need to format the input files acord
         perl run_gene_list.pl  ex_probe_list.txt  ex_dataset.txt  me_dataset.txt methylation_annotation.txt  data/gene_annotation.demo.txt
 
 ### III.  Final results.
-   The final results will be named as "MethylXcan.txt", including 22 columns.
+   The final results will be named as "MethylXcan.txt", including 21 columns.
 
 
 __CpG:__ name of CpG probes.  
@@ -88,8 +88,6 @@ __beta.multiple:__ regression coefficients from multiple regression of gene expr
 __beta.glmnet:__ coefficient from lasso regression between gene expression and its corresponding CpGs' methylation ratios.
 
 __R2.single.max:__  the largest coefficient of determination from the single regressions of one gene.
-
-__R2.single.max.var:__ variance between coefficients of determination from single regression.
 
 __R2.single.cv.max:__ max coefficient of determination from cross-validation of single regression.
 
