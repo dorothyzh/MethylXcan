@@ -89,7 +89,7 @@ __beta.glmnet:__ coefficient from lasso regression between gene expression and i
 
 __R2.single.max:__  the largest coefficient of determination from the single regressions of one gene.
 
-__R2.single.var:__  the variance of coefficient of determination from the single regressions of one gene.
+__R2.single.var:__  the variance of all the R2 values obtained from one gene.
 
 __R2.single.cv.max:__ max coefficient of determination from cross-validation of single regression.
 
