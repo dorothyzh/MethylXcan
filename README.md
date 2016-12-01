@@ -8,7 +8,7 @@ README for MethylXcan
 Table of Contents
 -----------------
 * [Introduction](#introduction)
-* [Compilation & Installation](#compilation)
+* [Prerequisites & Installation](#compilation)
 * [Usage](#usage)
     * [Using Methylation to predict Gene expression](#built)
 * [Demo](#demo)
@@ -17,7 +17,7 @@ Table of Contents
 * * *
 
 ## <a name="introduction"></a> Introduction
-We have developed the MethylXcan which can predict the transcriptome profiling lanscape (make it more specific on what people can actually get) based on DNA methylation data, and provide insights (genes and pathways that are more predictable) into the mechanism of these associations.
+We have developed the MethylXcan which can predict the gene expression pattern based on DNA methylation data, and can help to provide insights into the mechanism of these associations.
 
 ## <a name="compilation"></a> Prerequisites & Installation
 R 3.2.1 is suggested. Some R packages, like "glmnet" and "methods" are also required.They will be automatically installed.
@@ -30,10 +30,10 @@ No further installation is needed. You only need to format the input files acord
 #### a) ex_probe_list.txt
    One tab-delimited annotation file containing gene expression probe, gene name, official name, chromosome and locations. Here is one gene entry as example.
 
-      probe           gene name       official name   chromosome and locations  
-      ILMN_2038774    EEF1A1          NM_001402.5     chr6:74284964-74285013
+        
+         ILMN_2038774    EEF1A1          NM_001402.5     chr6:74284964-74285013
        
-    **Note**  This file cannot have header.
+    **Note**  This file is suggested without header.
 
 #### b) ex_dataset.txt 
    One tab-delimited gene expression profiling dataset, containing gene probe and its profiling values (normalized if it is microarray data) from different samples.
@@ -70,7 +70,7 @@ No further installation is needed. You only need to format the input files acord
       
         perl run_gene_list.pl  ex_probe_list.txt  ex_dataset.txt  me_dataset.txt methylation_annotation.txt  data/gene_annotation.demo.txt
 
-#### III.  Final results.
+### III.  Final results.
    The final results will be named as "MethylXcan.txt", including 22 columns.
 
 
@@ -89,29 +89,29 @@ __beta.glmnet:__ coefficient from lasso regression between gene expression and i
 
 __R2.single.max:__  the largest coefficient of determination from the single regressions of one gene.
 
-__R2.single.max.var:__ variance between coefficients of determination from single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.max.var:__ variance between coefficients of determination from single regression.
 
-__R2.single.cv.max:__ max coefficient of determination from cross-validation of single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.cv.max:__ max coefficient of determination from cross-validation of single regression.
 
-__R2.single.cv.max.var:__ variance between coefficients of determination from cross-validation of single regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.single.cv.max.var:__ variance between coefficients of determination from cross-validation of single regression.
 
-__R2.multiple:__ coefficient of determination from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple:__ coefficient of determination from multiple regressions.
 
-__R2.multiple.adjust:__ adjusted coefficient of determination from multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.adjust:__ adjusted coefficient of determination from multiple regressions.
 
-__R2.multiple.cv:__ coefficient of determination from cross-valudation of multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.cv:__ coefficient of determination from cross-valudation of multiple regressions.
 
-__R2.multiple.cv.var:__ variance of coefficient of determination from cross-valudation of multiple regressions between gene expression and its corresponding CpGs' methylation ratios.
+__R2.multiple.cv.var:__ variance of coefficient of determination from cross-valudation of multiple regressions.
 
-__R2.glmnet:__ coefficient of determination from lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet:__ coefficient of determination from lasso regressions.
 
-__R2.glmnet.cv:__ coefficient of determination from cross-validation of lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet.cv:__ coefficient of determination from cross-validation of lasso regressions.
 
-__R2.glmnet.cv.var:__ variance of coefficient of determination from cross-validation of lasso regression between gene expression and its corresponding CpGs' methylation ratios.
+__R2.glmnet.cv.var:__ variance of coefficient of determination from cross-validation of lasso regressions.
 
 __p.single:__ p-value from single regression.
 
-__p.multiple:__ p-value for each CpG in a  multiple regressions.
+__p.multiple:__ p-value for each CpG in a multiple regressions.
 
 __p.multiple.overall:__ the overall p-value from multiple regressions.
 
@@ -120,7 +120,8 @@ __genevar:__ variance of gene expression profiling between different samples.
 __dist:__ the distance between each CpG and its corresponding gene's TSS site.
 
 
-
+### IV. Warning.
+The program might take a long time to run, so when running the job in cluster, it is recommended to split your probe files (ex_probe_list.txt) into several files, and send the jobs to different nodes. 
 
 
 
