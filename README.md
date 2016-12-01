@@ -121,7 +121,7 @@ __dist:__ the distance between each CpG and its corresponding gene's TSS site.
 
 
 ### IV. Computing Time.
-The program might take a long time to run, so when running the job in cluster, it is recommended to split your probe files (ex_probe_list.txt) into several files, and send the jobs to different nodes. 
+The program might take a long time to run, hours for Gb-sized datasets. In demo, it might take 10 seconds to run 4 probes. So when running the job in cluster, it is recommended to split your probe files (ex_probe_list.txt) into several files, and send the jobs to different nodes. 
 
 
 
