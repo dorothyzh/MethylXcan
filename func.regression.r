@@ -202,7 +202,7 @@ func.glmnet.1.cv = function (exFile, meFile)
     # a=scale(x, center = TRUE, scale = TRUE)
     #  b=scale(y, center = TRUE, scale = TRUE)
     
-    cvfit = cv.glmnet(x, y,lambda=NULL,nfolds=10,alpha=1,standardize=T,standardize.response=T) 
+    cvfit = cv.glmnet(x, y,lambda=NULL,nfolds=10,alpha=1,standardize=T,standardize.response=F) 
     #cvfit here, a list with all the ingredients of the cross-validation fit
     cv.lambda=cvfit$lambda.min
     beta.glmnet=as.data.frame(as.matrix(coef(cvfit,s=cv.lambda)))
