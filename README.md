@@ -1,7 +1,7 @@
 README for MethylXcan
 ===============
 
-[Huan ZHONG](https://github.com/dorothyzh/) \(hzhong5 at uab dot edu\)
+[Huan ZHONG](https://github.com/dorothyzh/) \(hzhong5 at uab dot edu\) zhdorothy5@gmail.com
 
 * * *
 
